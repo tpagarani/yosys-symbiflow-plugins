@@ -52,7 +52,7 @@ module _80_quicklogic_alu (A, B, CI, BI, X, Y, CO);
 	       .cout    (C[0]),
 	       .p       (1'b0),
 	       .g       (CI),
-	       .sum     ()
+	       .sumout    ()
 	     );
 	endgenerate
 	genvar i;
@@ -62,7 +62,7 @@ module _80_quicklogic_alu (A, B, CI, BI, X, Y, CO);
 			.g(AA[i]),
 			.p(S[i]),
 			.cout(C[i+1]),
-		        .sum(Y[i])
+		        .sumout(Y[i])
 		);
 	end endgenerate
 	assign X = S;
