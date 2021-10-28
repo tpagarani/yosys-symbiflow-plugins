@@ -338,7 +338,8 @@ struct SynthQuickLogicPass : public ScriptPass {
             run("opt_lut");
         }
 
-        if (check_label("map_cells") && (family == "qlf_k6n10" || family == "pp3")) {
+        //if (check_label("map_cells") && (family == "qlf_k6n10" || family == "pp3")) {
+        if (check_label("map_cells") && (family == "pp3")) {
             std::string techMapArgs;
             techMapArgs = "-map +/quicklogic/" + family + "/lut_map.v";
             run("techmap " + techMapArgs);
